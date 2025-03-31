@@ -13,7 +13,7 @@ const httpServer = createServer((req, res) => {
 // Set up Socket.IO with the HTTP server
 const io = new Server(httpServer, {
   cors: {
-    origin: "*", // Adjust this for production
+    origin: ["*", "https://webprog-kappa.vercel.app"],
     methods: ["GET", "POST"]
   }
 });
